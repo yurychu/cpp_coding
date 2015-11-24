@@ -5,9 +5,10 @@ int main(){
 	using std::cin;
 	using std::endl;
 
-	cout << "Hello world!";
+	cout << "The Good, the\n";
+	cout << "Bad, ";
+	cout << "and the Ukulele";
 	cout << endl;
-	cout << "Dont Worry! Be happy!" << endl;
 	return 0;
 }
 
