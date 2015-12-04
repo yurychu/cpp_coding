@@ -7,9 +7,9 @@ int main(){
 	char name[ArSize];
 	char dessert[ArSize];
 	cout << "ВВедите свое имя: \n";
-	cin.getline(name, ArSize);
+	cin.get(name, ArSize).get();
 	cout << "Введите любимый десерт: \n";
-	cin.getline(dessert, ArSize);
+	cin.get(dessert, ArSize).get();
 	cout << "У меня есть вкусный " << dessert;
 	cout << " для вас, " << name << ".\n";
 
