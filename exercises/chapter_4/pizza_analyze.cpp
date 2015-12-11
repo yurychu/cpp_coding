@@ -1,4 +1,4 @@
-//служба анализа пиццы
+//служба анализа пиццы используем new и указатель на структуру
 
 #include <iostream>
 
@@ -11,22 +11,22 @@ struct informer{
 int main(){
 	using namespace std;
 
-	informer order;
+	informer *p_informer = new informer;
+	
+	cout << "Введите данные по заказу пиццы.\n";
+	cout << "Введите диаметр пиццы: ";
+	(cin >> p_informer->diameter).get();
 
-	cout << "Введите данные по заказу пиццы.\n"
-	"Название компании:";
-	cin.getline(order.company, 30);
-
-	cout << "Диаметр: ";
-	(cin >> order.diameter).get();
+	cout << "Название компании:";
+	cin.getline(p_informer->company, 30);
 
 	cout << "Вес: ";
-	(cin >> order.weight).get();
+	(cin >> p_informer->weight).get();
 
 	cout << "Получили следующие данные: " << endl
-	<< "Компания: " << order.company << endl
-	<< "Диаметр: " << order.diameter << endl
-	<< "Вес: " << order.weight << endl;
+	<< "Компания: " << p_informer->company << endl
+	<< "Диаметр: " << p_informer->diameter << endl
+	<< "Вес: " << p_informer->weight << endl;
 
 	return 0;
 }
