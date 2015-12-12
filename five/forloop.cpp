@@ -4,8 +4,8 @@
 
 int main(){
 	using namespace std;
-	int i; //счетчик
-	for (i = 0; i < 5; i++)
+	//int i; //счетчик
+	for (int i = 0; i < 5; i++)
 		cout << "Юзаем цикл в С++" << endl;
 	cout << "Знаем, где остановиться\n";
 
