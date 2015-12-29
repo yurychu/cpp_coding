@@ -21,7 +21,11 @@ int main(){
 		}
 		else {
 			cout << "У вас нет налогов\n";
-			break;
+
+			cout << "Введите сумму дохода: ";
+			cin >> value;
+
+			continue;
 		}
 
 		if (value >= (2 * Grade)){
@@ -31,7 +35,11 @@ int main(){
 		else {
 			tax += value * 0.10;
 			cout << "Ваш налог: " <<  tax << endl;
-			break;
+
+			cout << "Введите сумму дохода: ";
+			cin >> value;
+
+			continue;
 		}
 
 		if (value >= (4 * Grade)){
@@ -41,7 +49,11 @@ int main(){
 		else {
 			tax += value * 0.15;
 			cout << "Ваш налог: " << tax << endl;
-			break;
+
+			cout << "Введите сумму дохода: ";
+			cin >> value;
+
+			continue;
 		}
 
 		tax += value * 0.20;
