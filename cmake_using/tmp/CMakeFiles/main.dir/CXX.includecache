@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/yurychu/development/my_repo/prata_cpp/cmake_using/main.cpp
-iostream
--
+/home/yurychu/development/my_repo/prata_cpp/cmake_using/example1/foo.h
+
+/home/yurychu/development/my_repo/prata_cpp/cmake_using/example1/main.cpp
+foo.h
+/home/yurychu/development/my_repo/prata_cpp/cmake_using/example1/foo.h
 

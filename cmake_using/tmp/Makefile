@@ -39,7 +39,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yurychu/development/my_repo/prata_cpp/cmake_using
+CMAKE_SOURCE_DIR = /home/yurychu/development/my_repo/prata_cpp/cmake_using/example1
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/yurychu/development/my_repo/prata_cpp/cmake_using/tmp
@@ -99,6 +99,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named foo
+
+# Build rule for target.
+foo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 foo
+.PHONY : foo
+
+# fast build rule for target.
+foo/fast:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/build
+.PHONY : foo/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -110,6 +123,30 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+foo.o: foo.cpp.o
+.PHONY : foo.o
+
+# target to build an object file
+foo.cpp.o:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/foo.cpp.o
+.PHONY : foo.cpp.o
+
+foo.i: foo.cpp.i
+.PHONY : foo.i
+
+# target to preprocess a source file
+foo.cpp.i:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/foo.cpp.i
+.PHONY : foo.cpp.i
+
+foo.s: foo.cpp.s
+.PHONY : foo.s
+
+# target to generate assembly for a file
+foo.cpp.s:
+	$(MAKE) -f CMakeFiles/foo.dir/build.make CMakeFiles/foo.dir/foo.cpp.s
+.PHONY : foo.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -142,8 +179,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... foo"
 	@echo "... main"
 	@echo "... rebuild_cache"
+	@echo "... foo.o"
+	@echo "... foo.i"
+	@echo "... foo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

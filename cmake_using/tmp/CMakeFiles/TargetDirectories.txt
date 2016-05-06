@@ -1,1 +1,2 @@
+/home/yurychu/development/my_repo/prata_cpp/cmake_using/tmp/CMakeFiles/foo.dir
 /home/yurychu/development/my_repo/prata_cpp/cmake_using/tmp/CMakeFiles/main.dir

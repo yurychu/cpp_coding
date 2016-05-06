@@ -1,4 +1,4 @@
-# Install script for directory: /home/yurychu/development/my_repo/prata_cpp/cmake_using
+# Install script for directory: /home/yurychu/development/my_repo/prata_cpp/cmake_using/example1
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
